@@ -103,10 +103,12 @@ echo kalor::progressBarPercent(['download...', rand(100, 999).'kb/s'], $progress
 
 步骤进度条，后方显示的不是百分比而是步骤进度（第二个参数为数组，分别是当前进度和总进度）：
 
-```
+```php
 $progress = 0;
 while($progress < 5) {
     $progress ++;
+    // 传入的当前进度和总进度需要是正整数
+    // 如果当前进度等于总进度时，会自动换一行
     echo kalor::progressBarStep('download file '.$progress.'...', [$progress, 5]);
     sleep(1);
 }
