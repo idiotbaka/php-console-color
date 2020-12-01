@@ -21,7 +21,7 @@ echo kalor::text('hello, world', kalor::YELLOW, true);
 echo kalor::text('hello, world', [kalor::WHITE, kalor::BG_DARKGREEN, kalor::_UNDERLINE], true);
 ```
 
-
+![](https://raw.githubusercontent.com/idiotbaka/php-console-color/main/image/1.png)
 
 ### 支持的颜色
 
@@ -67,11 +67,19 @@ while($progress < 100) {
 }
 ```
 
+![](https://raw.githubusercontent.com/idiotbaka/php-console-color/main/image/2.gif)
+
+
+
 在进度条的后方显示信息，例如下载速度：
 
 ```php
 echo kalor::progressBarPercent(['download...', rand(100, 999).'kb/s'], $progress);
 ```
+
+![](https://raw.githubusercontent.com/idiotbaka/php-console-color/main/image/3.gif)
+
+
 
 自定义进度条字符长度，传入第三个参数（默认50）：
 
@@ -79,11 +87,19 @@ echo kalor::progressBarPercent(['download...', rand(100, 999).'kb/s'], $progress
 echo kalor::progressBarPercent(['download...', rand(100, 999).'kb/s'], $progress, 10);
 ```
 
+![](https://raw.githubusercontent.com/idiotbaka/php-console-color/main/image/4.gif)
+
+
+
 自定义进度条字符，传入第四个参数（数组，分别是进度完成部分和未完成部分）：
 
 ```php
 echo kalor::progressBarPercent(['download...', rand(100, 999).'kb/s'], $progress, 50, ['>', '_']);
 ```
+
+![](https://raw.githubusercontent.com/idiotbaka/php-console-color/main/image/5.gif)
+
+
 
 步骤进度条，后方显示的不是百分比而是步骤进度（第二个参数为数组，分别是当前进度和总进度）：
 
@@ -96,3 +112,4 @@ while($progress < 5) {
 }
 ```
 
+![](https://raw.githubusercontent.com/idiotbaka/php-console-color/main/image/6.gif)
